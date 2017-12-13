@@ -1,6 +1,6 @@
 {
-  "name": "tour-of-heroes",
-  "version": "0.0.0",
+  "name": "poc-project",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
