@@ -1,0 +1,37 @@
+input, paper-input, paper-checkbox {
+  margin-bottom: 8px;
+}
+iron-form {
+  @apply --shadow-elevation-2dp;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+paper-button {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+}
+#form1 paper-button {
+  width: 30%;
+}
+paper-button:not([disabled]) {
+  background: #03a9f4;
+  color: white;
+}
+paper-spinner {
+  width: 14px;
+  height: 14px;
+  margin-right: 20px;
+}
+paper-spinner[hidden] {
+  display: none;
+}
+.output {
+  margin-top: 20px;
+  word-wrap: break-word;
+  font-family: monospace;
+}
+
+twitter-button{
+    padding: 0px 5px 0px 5px;
+}

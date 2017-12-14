@@ -1,0 +1,31 @@
+<h3>Current date = {{date}}</h3>
+<h3>Hello, {{hostValue}}</h3>
+
+<iron-list [items]="[items]" as="item">
+  <template [polymer]="this" ngNonBindable>
+    <my-item item="[[item]]" color="[[this.getColor(item)]]">{{item}}</my-item>
+  </template>
+</iron-list>
+
+<mp-calendar id="customCalendar" day-labels='["Su","Mo","Tu","We","Th","Fr","Sa"]' disabled-weeks="[5]" (click)="onSelected($event)">
+</mp-calendar>
+
+<iron-form id="form">
+  <form action="/" method="get">
+    <paper-input label="Name" value="{{hostValue}}" (input)="hostValue = $event.target.value" (value-changed)=f($event)></paper-input>
+    <input type="checkbox" required> You must check this box.
+    <p>Using a native button to submit the form will display the native browser validation UI for native elements: </p>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+    <p>Using a custom element to submit the form will not display the native browser validation UI:</p>
+    <paper-button>Submit</paper-button>
+    <paper-button>Reset</paper-button>
+  </form>
+  <br>
+  <div class="output"></div>
+</iron-form>
+
+<twitter-button type="share" width="80" height="30" user="1000ch" href="http://github.com/1000ch/social-button" text="Social Button as Web Components"></twitter-button>
+<twitter-button type="hashtag" width="160" height="30" text="Social Button as Web Components" hashtag="webcomponents"></twitter-button>
+<twitter-button type="mention" width="120" height="30" user="1000ch"></twitter-button>

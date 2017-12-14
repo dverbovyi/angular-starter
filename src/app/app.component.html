@@ -1,0 +1,27 @@
+<app-header reveals>
+    <app-toolbar>
+      <paper-icon-button icon="menu" onclick="drawer.toggle()"></paper-icon-button>
+      <div main-title>Mixed app</div>
+      <paper-icon-button icon="delete"></paper-icon-button>
+      <paper-icon-button icon="search"></paper-icon-button>
+      <paper-icon-button icon="close"></paper-icon-button>
+      <paper-progress value="10" indeterminate bottom-item></paper-progress>
+    </app-toolbar>
+  </app-header>
+  <app-drawer id="drawer" swipe-open>
+      <!-- <li><a href="">Home</a></li>
+      <li><a href="">What we do</a></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href="">About</a></li> -->
+  </app-drawer>
+  
+<nav>
+  <li>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  </li>
+  <li>
+    <a routerLink="/entity-manage">Entity Manage</a>
+  </li>
+</nav>
+
+<router-outlet></router-outlet>
