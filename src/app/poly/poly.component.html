@@ -1,11 +1,14 @@
 <h3>Current date = {{date}}</h3>
 <h3>Hello, {{hostValue}}</h3>
 
-<iron-list [items]="[items]" as="item">
+<!-- <iron-list [items]="[data]" as="item">
   <template [polymer]="this" ngNonBindable>
-    <my-item item="[[item]]" color="[[this.getColor(item)]]">{{item}}</my-item>
+    <my-item item="[[item]]" color="[[this.getColor(item)]]">{{obj | json}}</my-item>
   </template>
-</iron-list>
+</iron-list> -->
+
+<li *ngFor="let obj of data">{{obj | json}}</li>
+
 
 <mp-calendar id="customCalendar" day-labels='["Su","Mo","Tu","We","Th","Fr","Sa"]' disabled-weeks="[5]" (click)="onSelected($event)">
 </mp-calendar>
