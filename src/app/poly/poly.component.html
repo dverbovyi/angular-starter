@@ -7,7 +7,15 @@
   </template>
 </iron-list> -->
 
-<li *ngFor="let obj of data">{{obj | json}}</li>
+<paper-dropdown-input label="Custom dropdown"
+  [items]="[items]">
+</paper-dropdown-input>
+
+<paper-dropdown-input label="Custom dropdown"
+  [items]='["Velociraptor","Deinonychus","Allosaurus","Brontosaurus","Carcharodontosaurus","Diplodocus","T-Rex"]'>
+</paper-dropdown-input>
+
+<!-- <li *ngFor="let obj of data">{{obj | json}}</li> -->
 
 <mp-calendar id="customCalendar" day-labels='["Su","Mo","Tu","We","Th","Fr","Sa"]' disabled-weeks="[5]" (click)="onSelected($event)">
 </mp-calendar>

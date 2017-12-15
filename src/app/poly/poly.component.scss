@@ -35,3 +35,10 @@ paper-spinner[hidden] {
 twitter-button{
     padding: 0px 5px 0px 5px;
 }
+paper-dropdown-menu, paper-listbox {
+  width: 200px;
+}
+paper-dropdown-menu {
+  height: 200px;
+  display: block;
+}
