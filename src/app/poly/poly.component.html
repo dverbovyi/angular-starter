@@ -9,13 +9,12 @@
 
 <li *ngFor="let obj of data">{{obj | json}}</li>
 
-
 <mp-calendar id="customCalendar" day-labels='["Su","Mo","Tu","We","Th","Fr","Sa"]' disabled-weeks="[5]" (click)="onSelected($event)">
 </mp-calendar>
 
 <iron-form id="form">
   <form action="/" method="get">
-    <paper-input label="Name" value="{{hostValue}}" (input)="hostValue = $event.target.value" (value-changed)=f($event)></paper-input>
+    <paper-input label="Name" value="{{hostValue}}" (input)="hostValue = $event.target.value" (value-changed)=onValueChange($event)></paper-input>
     <input type="checkbox" required> You must check this box.
     <p>Using a native button to submit the form will display the native browser validation UI for native elements: </p>
     <button type="submit">Submit</button>

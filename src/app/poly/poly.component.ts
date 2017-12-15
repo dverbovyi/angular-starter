@@ -42,8 +42,14 @@ export class PolyComponent {
 
   getContacts(){
       this.getData().subscribe(data => {
-          console.log(data);
+          var beforeRenderTime = window.performance.now();
+          console.log('Before rendering => ' + beforeRenderTime);
+
           this.data = data;
+
+          var afterRenderTime = window.performance.now();
+          console.log('After rendering => ' + afterRenderTime);
+          console.log('Rendering time :' + (afterRenderTime - beforeRenderTime));
       })
 
       console.log(this.data);
@@ -56,9 +62,5 @@ export class PolyComponent {
 
   onValueChange($event) {
     // TODO :: implement two way binding
-  }
-
-  f() {
-    console.log('asdasd');
   }
 }
