@@ -25,6 +25,7 @@
     "neon-animation": "2.0.0",
     "paper-item": "^2.0.0",
     "paper-listbox": "PolymerElements/paper-listbox#^2.0.0",
-    "paper-dropdown-input": "^2.5.2"
+    "paper-dropdown-input": "^2.5.2",
+    "iron-list": "PolymerElements/iron-list#^2.0.12"
   }
 }

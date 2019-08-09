@@ -7,8 +7,10 @@
   </template>
 </iron-list> -->
 
+
 <paper-dropdown-input label="Custom dropdown"
-  [items]="[items]">
+  [items]="[[items]]">
+      <paper-item *ngFor="let obj of items">{{obj}}</paper-item>
 </paper-dropdown-input>
 
 <paper-dropdown-input label="Custom dropdown"
